@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Env: Snapshot",
+            "type": "process",
+            "command": "/usr/bin/python3",
+            "args": [
+                "${workspaceFolder}/scripts/environment.py",
+                "snapshot"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Env: Rebuild from lock",
+            "type": "process",
+            "command": "/usr/bin/python3",
+            "args": [
+                "${workspaceFolder}/scripts/environment.py",
+                "rebuild"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Env: Sync from lock",
+            "type": "process",
+            "command": "/usr/bin/python3",
+            "args": [
+                "${workspaceFolder}/scripts/environment.py",
+                "sync"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Env: Copy local snapshot to shared",
+            "type": "process",
+            "command": "/usr/bin/python3",
+            "args": [
+                "${workspaceFolder}/scripts/environment.py",
+                "local-to-shared"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": []
+        }
+    ]
+}
